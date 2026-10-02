@@ -1,6 +1,10 @@
 (() => {
   const reveals = [...document.querySelectorAll('.reveal')];
-  const photoEffects = ['left', 'right', 'scale', 'turn-left', 'turn-right', 'wipe-left', 'wipe-right', 'diagonal', 'flip', 'swing', 'rise'];
+  const isIOSWebKit = /iPad|iPhone|iPod/.test(navigator.userAgent)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const photoEffects = isIOSWebKit
+    ? ['left', 'right', 'up', 'scale', 'turn-left', 'turn-right', 'swing']
+    : ['left', 'right', 'scale', 'turn-left', 'turn-right', 'wipe-left', 'wipe-right', 'diagonal', 'flip', 'swing', 'rise'];
   const textEffects = ['up', 'left', 'right', 'soft', 'scale'];
   const frameStyles = ['classic', 'tape', 'film', 'offset', 'line'];
   let previous = -1;
@@ -38,7 +42,18 @@
       if (!entry.isIntersecting) return;
       io.unobserve(entry.target);
 
-      const show = () => entry.target.classList.add('is-visible');
+      let shown = false;
+      const show = () => {
+        if (shown) return;
+        shown = true;
+
+        /* Safari iOS puede cargar y revelar dentro del mismo ciclo de pintura.
+           Dos frames garantizan que primero dibuje el estado inicial. */
+        void entry.target.offsetWidth;
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => entry.target.classList.add('is-visible'));
+        });
+      };
       const image = entry.target.matches('.photo-frame')
         ? entry.target.querySelector('img')
         : null;
