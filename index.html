@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171116">
+  <meta name="description" content="Una colección de 24 recuerdos y pequeñas sorpresas.">
+  <title>Para ti ♥</title>
+  <link rel="preload" href="assets/home-anime.webp" as="image" type="image/webp">
+  <link rel="preload" href="assets/photos/01.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js', 'gate-active')</script>
+</head>
+<body>
+  <section class="manga-gate" id="manga-gate" aria-labelledby="gate-title">
+    <div class="gate-art" aria-hidden="true"></div>
+    <div class="gate-halftone" aria-hidden="true"></div>
+    <div class="manga-slice slice-one" aria-hidden="true"></div>
+    <div class="manga-slice slice-two" aria-hidden="true"></div>
+    <div class="gate-curtain curtain-left" aria-hidden="true"></div>
+    <div class="gate-curtain curtain-right" aria-hidden="true"></div>
+    <div class="magic-portal" aria-hidden="true">
+      <i></i><i></i><i></i>
+      <span>✦</span><span>✧</span><span>✦</span><span>·</span><span>✧</span>
+    </div>
+
+    <div class="gate-topline">
+      <span>Una historia para ti</span>
+      <i>✦</i>
+    </div>
+
+    <div class="gate-card">
+      <p class="gate-kicker">Hoy es tu cumpleaños</p>
+      <h1 id="gate-title">Hay algo<br>esperándote.</h1>
+      <p class="riddle">Vive en el mar. Tiene cuatro letras. Escríbela para descubrir tu regalo.</p>
+
+      <form class="riddle-form" id="riddle-form" autocomplete="off">
+        <label for="riddle-answer">La palabra</label>
+        <div class="answer-row">
+          <input id="riddle-answer" name="answer" type="text" inputmode="text" maxlength="12" placeholder="Escribe la clave" aria-describedby="riddle-feedback" required>
+          <button type="submit" aria-label="Comprobar respuesta">Entrar</button>
+        </div>
+        <p class="riddle-feedback" id="riddle-feedback" aria-live="polite">Todo regalo guarda un secreto.</p>
+      </form>
+    </div>
+
+    <div class="unlock-message" aria-hidden="true">
+      <span>Respuesta correcta</span>
+      <strong>Bienvenida ♥</strong>
+    </div>
+  </section>
+
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient-hearts" aria-hidden="true">
+    <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+  </div>
+
+  <main>
+    <section class="hero dark-section" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Para ti</p>
+        <h1 id="hero-title">Pedacitos<br>de nosotros.</h1>
+        <p class="hero-note">24 recuerdos. Una persona favorita.</p>
+      </div>
+
+      <figure class="photo-frame hero-frame reveal" data-kind="portrait">
+        <span class="frame-number">01</span>
+        <div class="photo-mat">
+          <img src="assets/photos/01.webp" srcset="assets/photos/01-800.webp 800w, assets/photos/01.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1200" height="1600" alt="Nosotros junto al mar" fetchpriority="high">
+        </div>
+        <figcaption>tú + yo</figcaption>
+      </figure>
+
+      <div class="scroll-cue" aria-hidden="true"><span>Desliza</span><i></i></div>
+    </section>
+
+    <section class="gallery-section dark-section">
+      <div class="ornament star" aria-hidden="true">✦</div>
+      <figure class="photo-frame frame-wide reveal" data-kind="wide">
+        <span class="frame-number">02</span>
+        <div class="photo-mat"><img src="assets/photos/02.webp" srcset="assets/photos/02-800.webp 800w, assets/photos/02.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1600" height="1200" alt="Un recuerdo divertido juntos" loading="lazy" decoding="async"></div>
+      </figure>
+      <div class="short-copy reveal"><span>Qué suerte.</span></div>
+
+      <div class="portrait-stack">
+        <figure class="photo-frame frame-portrait reveal tilt-left" data-kind="portrait">
+          <span class="frame-number">03</span>
+          <div class="photo-mat"><img src="assets/photos/03.webp" srcset="assets/photos/03-800.webp 800w, assets/photos/03.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1200" height="1600" alt="Un beso entre luces" loading="lazy" decoding="async"></div>
+        </figure>
+        <figure class="photo-frame frame-portrait reveal tilt-right" data-kind="portrait">
+          <span class="frame-number">04</span>
+          <div class="photo-mat"><img src="assets/photos/04.webp" srcset="assets/photos/04-800.webp 800w, assets/photos/04.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1086" height="1448" alt="Una tarde de piscina" loading="lazy" decoding="async"></div>
+          <figcaption>solo nosotros</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="gallery-section light-section wave-top">
+      <p class="chapter reveal">Donde estés tú.</p>
+      <figure class="photo-frame frame-portrait ink-frame reveal" data-kind="portrait">
+        <span class="frame-number">05</span>
+        <div class="photo-mat"><img src="assets/photos/05.webp" srcset="assets/photos/05-800.webp 800w, assets/photos/05.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1200" height="1600" alt="Un viaje entre montañas" loading="lazy" decoding="async"></div>
+      </figure>
+      <figure class="photo-frame frame-wide ink-frame reveal offset-right" data-kind="wide">
+        <span class="frame-number">06</span>
+        <div class="photo-mat"><img src="assets/photos/06.webp" srcset="assets/photos/06-800.webp 800w, assets/photos/06.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1600" height="1200" alt="Una selfie juntos" loading="lazy" decoding="async"></div>
+      </figure>
+      <div class="hand-heart reveal" aria-hidden="true">♥</div>
+    </section>
+
+    <section class="gallery-section dark-section ribbon-section">
+      <div class="ribbon" aria-hidden="true"><span>CONTIGO · CONTIGO · CONTIGO · CONTIGO ·</span></div>
+      <figure class="photo-frame frame-portrait reveal offset-left" data-kind="portrait">
+        <span class="frame-number">07</span>
+        <div class="photo-mat"><img src="assets/photos/07.webp" srcset="assets/photos/07-800.webp 800w, assets/photos/07.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1200" height="1600" alt="Una noche elegante" loading="lazy" decoding="async"></div>
+      </figure>
+      <p class="chapter chapter-light reveal">Mi persona favorita.</p>
+      <figure class="photo-frame frame-wide reveal" data-kind="wide">
+        <span class="frame-number">08</span>
+        <div class="photo-mat"><img src="assets/photos/08.webp" srcset="assets/photos/08-800.webp 800w, assets/photos/08.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1600" height="1200" alt="Un día de viaje" loading="lazy" decoding="async"></div>
+      </figure>
+      <figure class="photo-frame frame-portrait reveal offset-right" data-kind="portrait">
+        <span class="frame-number">09</span>
+        <div class="photo-mat"><img src="assets/photos/09.webp" srcset="assets/photos/09-800.webp 800w, assets/photos/09.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1200" height="1600" alt="Juntos frente a la ciudad" loading="lazy" decoding="async"></div>
+        <figcaption>más días así</figcaption>
+      </figure>
+    </section>
+
+    <section class="gallery-section blush-section">
+      <div class="outline-heart" aria-hidden="true">♡</div>
+      <p class="chapter reveal">Tú. Siempre tú.</p>
+      <figure class="photo-frame frame-wide burgundy-frame reveal offset-left" data-kind="wide">
+        <span class="frame-number">10</span>
+        <div class="photo-mat"><img src="assets/photos/10.webp" srcset="assets/photos/10-800.webp 800w, assets/photos/10.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1600" height="1200" alt="Un momento tranquilo juntos" loading="lazy" decoding="async"></div>
+      </figure>
+      <figure class="photo-frame frame-tall burgundy-frame reveal offset-right" data-kind="portrait">
+        <span class="frame-number">11</span>
+        <div class="photo-mat"><img src="assets/photos/11.webp" srcset="assets/photos/11-800.webp 800w, assets/photos/11.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="901" height="1600" alt="Una tarde soleada" loading="lazy" decoding="async"></div>
+      </figure>
+      <div class="short-copy dark-text reveal"><span>Así de simple.</span></div>
+      <figure class="photo-frame frame-wide burgundy-frame reveal" data-kind="wide">
+        <span class="frame-number">12</span>
+        <div class="photo-mat"><img src="assets/photos/12.webp" srcset="assets/photos/12-800.webp 800w, assets/photos/12.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1600" height="1200" alt="Una noche juntos" loading="lazy" decoding="async"></div>
+      </figure>
+    </section>
+
+    <section class="gallery-section dark-section constellation">
+      <div class="sparkles" aria-hidden="true"><i>✦</i><i>·</i><i>✦</i><i>·</i></div>
+      <p class="chapter chapter-light reveal">Nosotros.</p>
+      <figure class="photo-frame frame-portrait reveal tilt-right" data-kind="portrait">
+        <span class="frame-number">13</span>
+        <div class="photo-mat"><img src="assets/photos/13.webp" srcset="assets/photos/13-800.webp 800w, assets/photos/13.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1200" height="1600" alt="Una noche en Cartagena" loading="lazy" decoding="async"></div>
+      </figure>
+      <figure class="photo-frame frame-wide reveal offset-left" data-kind="wide">
+        <span class="frame-number">14</span>
+        <div class="photo-mat"><img src="assets/photos/14.webp" srcset="assets/photos/14-800.webp 800w, assets/photos/14.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1600" height="1200" alt="Una celebración juntos" loading="lazy" decoding="async"></div>
+      </figure>
+      <figure class="photo-frame frame-portrait reveal offset-right" data-kind="portrait">
+        <span class="frame-number">15</span>
+        <div class="photo-mat"><img src="assets/photos/15.webp" srcset="assets/photos/15-800.webp 800w, assets/photos/15.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1200" height="1600" alt="Un día especial" loading="lazy" decoding="async"></div>
+        <figcaption>qué bonito coincidir</figcaption>
+      </figure>
+    </section>
+
+    <section class="gallery-section light-section final-gallery">
+      <p class="chapter reveal">Y todo lo vivido.</p>
+      <figure class="photo-frame frame-wide ink-frame reveal" data-kind="wide">
+        <span class="frame-number">16</span>
+        <div class="photo-mat"><img src="assets/photos/16.webp" srcset="assets/photos/16-800.webp 800w, assets/photos/16.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1600" height="1200" alt="Una fiesta juntos" loading="lazy" decoding="async"></div>
+      </figure>
+      <figure class="photo-frame frame-portrait ink-frame reveal offset-left" data-kind="portrait">
+        <span class="frame-number">17</span>
+        <div class="photo-mat"><img src="assets/photos/17.webp" srcset="assets/photos/17-800.webp 800w, assets/photos/17.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1200" height="1600" alt="Una noche elegante juntos" loading="lazy" decoding="async"></div>
+      </figure>
+      <figure class="photo-frame frame-wide ink-frame reveal offset-right" data-kind="wide">
+        <span class="frame-number">18</span>
+        <div class="photo-mat"><img src="assets/photos/18.webp" srcset="assets/photos/18-800.webp 800w, assets/photos/18.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1600" height="1200" alt="Uno de nuestros primeros recuerdos" loading="lazy" decoding="async"></div>
+      </figure>
+      <figure class="photo-frame frame-square ink-frame reveal" data-kind="square">
+        <span class="frame-number">19</span>
+        <div class="photo-mat"><img src="assets/photos/19.webp" srcset="assets/photos/19-800.webp 800w, assets/photos/19.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1600" height="1595" alt="Otro recuerdo de nosotros" loading="lazy" decoding="async"></div>
+        <figcaption>por muchos más</figcaption>
+      </figure>
+    </section>
+
+    <section class="gallery-section bonus-section blush-section" aria-labelledby="bonus-title">
+      <div class="bonus-intro">
+        <p class="eyebrow reveal">Cinco recuerdos más</p>
+        <h2 id="bonus-title" class="chapter reveal">Nunca son demasiados.</h2>
+        <p class="tap-hint reveal">Toca las fotos ♥</p>
+      </div>
+
+      <button class="surprise-card reveal" type="button" data-surprise aria-live="polite">
+        <span>Toca para descubrir</span>
+        <strong data-surprise-text>Una pequeña sorpresa</strong>
+        <i aria-hidden="true">♥</i>
+      </button>
+
+      <figure class="photo-frame frame-portrait burgundy-frame interactive reveal offset-left" data-kind="portrait" role="button" tabindex="0" aria-label="Toca para descubrir una frase">
+        <span class="frame-number">20</span>
+        <div class="photo-mat"><img src="assets/photos/20.webp" srcset="assets/photos/20-800.webp 800w, assets/photos/20.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="1200" height="1600" alt="Un recuerdo juntos" loading="lazy" decoding="async"></div>
+        <figcaption>tócame ♥</figcaption>
+        <span class="tap-note" aria-live="polite"></span>
+      </figure>
+
+      <figure class="photo-frame frame-tall burgundy-frame interactive reveal offset-right" data-kind="portrait" role="button" tabindex="0" aria-label="Toca para descubrir una frase">
+        <span class="frame-number">21</span>
+        <div class="photo-mat"><img src="assets/photos/21.webp" srcset="assets/photos/21-800.webp 800w, assets/photos/21.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="720" height="1280" alt="Un recuerdo divertido juntos" loading="lazy" decoding="async"></div>
+        <figcaption>tócame ♥</figcaption>
+        <span class="tap-note" aria-live="polite"></span>
+      </figure>
+
+      <figure class="photo-frame frame-wide burgundy-frame interactive reveal" data-kind="wide" role="button" tabindex="0" aria-label="Toca para descubrir una frase">
+        <span class="frame-number">22</span>
+        <div class="photo-mat"><img src="assets/photos/22.webp" srcset="assets/photos/22-800.webp 800w, assets/photos/22.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="999" height="723" alt="Una selfie en el carro" loading="lazy" decoding="async"></div>
+        <figcaption>tócame ♥</figcaption>
+        <span class="tap-note" aria-live="polite"></span>
+      </figure>
+
+      <figure class="photo-frame frame-portrait burgundy-frame interactive reveal offset-left" data-kind="portrait" role="button" tabindex="0" aria-label="Toca para descubrir una frase">
+        <span class="frame-number">23</span>
+        <div class="photo-mat"><img src="assets/photos/23.webp" srcset="assets/photos/23-800.webp 800w, assets/photos/23.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="960" height="1280" alt="Una foto juntos con nuestro perro" loading="lazy" decoding="async"></div>
+        <figcaption>tócame ♥</figcaption>
+        <span class="tap-note" aria-live="polite"></span>
+      </figure>
+
+      <figure class="photo-frame frame-tall burgundy-frame interactive reveal offset-right" data-kind="portrait" role="button" tabindex="0" aria-label="Toca para descubrir una frase">
+        <span class="frame-number">24</span>
+        <div class="photo-mat"><img src="assets/photos/24.webp" srcset="assets/photos/24-800.webp 800w, assets/photos/24.webp 1280w" sizes="(max-width: 760px) 88vw, 610px" width="900" height="1600" alt="Una tarde juntos" loading="lazy" decoding="async"></div>
+        <figcaption>tócame ♥</figcaption>
+        <span class="tap-note" aria-live="polite"></span>
+      </figure>
+    </section>
+
+    <section class="finale dark-section">
+      <div class="final-heart reveal" aria-hidden="true">♥</div>
+      <p class="eyebrow reveal">Para mi persona favorita</p>
+      <h2 class="reveal">Feliz<br>cumpleaños.</h2>
+      <p class="final-line reveal">Lo mejor sigue.</p>
+      <button class="heart-button" type="button" aria-label="Lanzar corazones">♥</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
